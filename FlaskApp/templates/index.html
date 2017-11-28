@@ -34,7 +34,7 @@
   width: 100%;
   border: 0;
   margin: 0 0 15px;
-  padding: 15px;
+  padding: 15px 20px;
   box-sizing: border-box;
   font-size: 14px;
 }
@@ -47,7 +47,7 @@
   border: 0;
   padding: 15px;
   color: #FFFFFF;
-  font-size: 14px;
+  font-size: 17px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
@@ -125,9 +125,15 @@
   width: 100%;
   border: 0;
   margin: 0 0 15px;
-  padding: 10px;
+  padding: 10px 5px;
   box-sizing: border-box;
   font-size: 14px;
+}
+.dropdown select {
+  background-color: inherit;
+  border: none;
+  box-shadow: none;
+  margin: 0;
 }
 body {
   background: #CE9689; /* fallback for old browsers */
@@ -144,23 +150,23 @@ body {
         <div class="containerhome">
           <h1 style="color: white; font-size: 60px">MONEYCO</h1>
           <h2 style="margin-bottom: 20px">
-              Get your predict of Income just one click!
+              Predict your income in just one click!
           </h2>
         </div>
 
         <div class="containerhome">
             <h4>
-                Input your atribut:
+                Input your information below :
             </h4>
         </div>  
         
         <div class="login-page">
         <div class="form">
           <form class="login-form" action="http://localhost:5000/predict" method="post">
-            <input type="text" name="age" placeholder="age"/>
+            <input type="text" name="age" placeholder="age" required />
             <div class="dropdown">
-              <select class="form-control" name="workclass">
-                <option disabled selected>workclass</option>
+              <select class="form-control" name="workclass" required>
+                <option disabled selected value="">workclass</option>
                 <option>Private</option>
                 <option>Self-emp-not-inc</option>
                 <option>Self-emp-inc</option>
@@ -171,10 +177,10 @@ body {
                 <option>Never-worked</option>
               </select>
             </div>
-            <input type="text" name="fnlwgt" placeholder="fnlwgt"/>
+            <input type="text" name="fnlwgt" placeholder="fnlwgt" required />
             <div class="dropdown">
-              <select class="form-control" name="education">
-                <option disabled selected>education</option>
+              <select class="form-control" name="education" required>
+                <option disabled selected value="">education</option>
                 <option>Bachelors</option>
                 <option>Some-college</option>
                 <option>11th</option>
@@ -193,10 +199,10 @@ body {
                 <option>Preschool</option>
               </select>
             </div>
-            <input type="text" name="education-num" placeholder="education-num"/>
+            <input type="text" name="education-num" placeholder="education-num" required />
             <div class="dropdown">
-              <select class="form-control" name="marital-status">
-                <option disabled selected>marital-status</option>
+              <select class="form-control" name="marital-status" required>
+                <option disabled selected value="">marital-status</option>
                 <option>Married-civ-spouse</option>
                 <option>Divorced</option>
                 <option>Never-married</option>
@@ -207,8 +213,8 @@ body {
               </select>
             </div>
             <div class="dropdown">
-              <select class="form-control" name="occupation">
-                <option disabled selected>occupation</option>
+              <select class="form-control" name="occupation" required>
+                <option disabled selected value="">occupation</option>
                 <option>Tech-support</option>
                 <option>Craft-repair</option>
                 <option>Other-service</option>
@@ -226,8 +232,8 @@ body {
               </select>
             </div>
             <div class="dropdown">
-              <select class="form-control" name="relationship">
-                <option disabled selected>relationship</option>
+              <select class="form-control" name="relationship" required>
+                <option disabled selected value="">relationship</option>
                 <option>Wife</option>
                 <option>Own-child</option>
                 <option>Husband</option>
@@ -237,8 +243,8 @@ body {
               </select>
             </div>
             <div class="dropdown">
-              <select class="form-control" name="race">
-                <option disabled selected>race</option>
+              <select class="form-control" name="race" required>
+                <option disabled selected value="">race</option>
                 <option>White</option>
                 <option>Asian-Pac-Islander</option>
                 <option>Amer-Indian-Eskimo</option>
@@ -247,18 +253,18 @@ body {
               </select>
             </div>
             <div class="dropdown">
-              <select class="form-control" name="sex">
-                <option disabled selected>sex</option>
+              <select class="form-control" name="sex" required>
+                <option disabled selected value="">sex</option>
                 <option>Female</option>
                 <option>Male</option>
               </select>
             </div>
-            <input type="text" name="capital-gain" placeholder="capital-gain"/>
-            <input type="text" name="capital-loss" placeholder="capital-loss"/>
-            <input type="text" name="hours-per-week" placeholder="hours-per-week"/>
+            <input type="text" name="capital-gain" placeholder="capital-gain" required />
+            <input type="text" name="capital-loss" placeholder="capital-loss" required />
+            <input type="text" name="hours-per-week" placeholder="hours-per-week" required />
             <div class="dropdown">
-              <select class="form-control" name="native-country">
-                <option disabled selected>native-country</option>
+              <select class="form-control" name="native-country" required>
+                <option disabled selected value="">native-country</option>
                 <option>United-States</option>
                 <option>Cambodia</option>
                 <option>England</option>

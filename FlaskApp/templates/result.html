@@ -66,13 +66,8 @@
 .form .register-form {
   display: none;
 }
-
-.home {
-
-}
-
 .container {
-    margin-top: 80px;
+    margin-top: 50px;
     text-align: center;
 }
 
@@ -86,26 +81,15 @@
   clear: both;
 }
 
-.container:before,
-.container:after {
-  display: table;
-  content: " ";
-}
-
-.container:after {
-  clear: both;
-}
-
 .container .info {
-  margin: 50px auto;
+  margin: 30px auto;
   text-align: center;
 }
 .container .info h1 {
-  margin: 0 0 15px;
   padding: 0;
   font-size: 36px;
   font-weight: 300;
-  color: #1a1a1a\\\\;
+  color: #1a1a1a;
 }
 .container .info span {
   color: #4d4d4d;
@@ -117,6 +101,24 @@
 }
 .container .info span .fa {
   color: #EF3B3A;
+}
+.anotherpredict button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #FFFFFF;
+  width: 20%;
+  border: 0;
+  padding: 15px;
+  color: #CE9689;
+  font-size: 20px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.anotherpredict button:hover,.anotherpredict button:active,.anotherpredict button:focus {
+  background: #B76E79;
+  color: #FFFFFF;
 }
 body {
   background: #CE9689; /* fallback for old browsers */
@@ -131,20 +133,18 @@ body {
     <!-- {!! Form::open(array('action' => 'HomeController@fillForm','method' => 'post')) !!} -->
     <div class="home">
         <div class="container">
-            <div class="jumbotron">
-                <h1 style="color: white; font-size: 50px">YOUR INCOME PREDICT :</h1>
-            </div>
+          <h1 style="color: white; font-size: 50px">YOUR INCOME PREDICT :</h1>
         </div>
 
         <div class="container">
-            <h4>
+            <h2 style="font-size: 30px">
                 {{messages['result']}}
-            </h4>
+            </h2>
         </div>  
 
         <div class="container">
           <div class="anotherpredict">
-              <button onclick="location.href='http://localhost:5000/';" type="button" class="btn btn-default" role="button" style="font-size: 20px;">Try Another Predict</button>
+            <button onclick="location.href='http://localhost:5000/';" type="submit">Try Another Predict</button>
           </div>
         </div>
         
