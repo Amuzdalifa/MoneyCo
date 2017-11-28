@@ -4,18 +4,16 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    return render_template('index.html')
+    return render_template('coba.html')
 
-@app.route('/count',methods=['POST'])
+@app.route('/predict',methods=['POST'])
 def count():
  
     # read the posted values from the UI
-    _input1 = request.form['input1']
-    _input2 = request.form['input2']
-    output = int(_input1) + int(_input2)
+    _input1 = request.form['workclass']
  
     # validate the received values
-    return "output : " + str(output)
+    return "output : " + _input1
 
 if __name__ == "__main__":
     app.run()
