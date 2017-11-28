@@ -108,16 +108,21 @@ body {
     <!-- {!! Form::open(array('action' => 'HomeController@fillForm','method' => 'post')) !!} -->
       <div class="login-page">
         <div class="form">
-          <form class="login-form" action="http://localhost:5000/handlePost" method="post">
-            <input type="text" name="nama" placeholder="age"/>
-            <input type="text" name="nim" placeholder="workclass"/>
-            <input type="text" name="fakultas" placeholder="fnlwgt"/>
-            <input type="text" name="fakultas" placeholder="education"/>
-            <input type="text" name="fakultas" placeholder="education-num"/>
-            <input type="text" name="fakultas" placeholder="marital-status"/>
-            <input type="text" name="fakultas" placeholder="occupation"/>
-            <input type="text" name="fakultas" placeholder="relationship"/>
-            <input type="text" name="fakultas" placeholder="race"/>
+          <form class="login-form" action="" method="post">
+            <input type="text" name="age" placeholder="age"/>
+            <input type="text" name="workclass" placeholder="workclass"/>
+            <input type="text" name="fnlwgt" placeholder="fnlwgt"/>
+            <input type="text" name="education" placeholder="education"/>
+            <input type="text" name="education-num" placeholder="education-num"/>
+            <input type="text" name="marital-status" placeholder="marital-status"/>
+            <input type="text" name="occupation" placeholder="occupation"/>
+            <input type="text" name="relationship" placeholder="relationship"/>
+            <input type="text" name="race" placeholder="race"/>
+            <input type="text" name="sex" placeholder="sex"/>
+            <input type="text" name="capital-gain" placeholder="capital-gain"/>
+            <input type="text" name="capital-loss" placeholder="capital-loss"/>
+            <input type="text" name="hours-per-week" placeholder="hours-per-week"/>
+            <input type="text" name="native-country" placeholder="native-country"/>
             <button type="submit" name="btn" value="Login" /> Predict
           </form>
         </div>
