@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MoneyCo</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.dropdown {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #CE9689;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #B76E79;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a\\\\;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+body {
+  background: #CE9689; /* fallback for old browsers */
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+</style>
+    </head>
+    <body>
+    <!-- {!! Form::open(array('action' => 'HomeController@fillForm','method' => 'post')) !!} -->
+      <div class="login-page">
+        <div class="form">
+          <form class="login-form" action="http://localhost:5000/predict" method="post">
+            <input type="text" name="age" placeholder="age"/>
+            <div class="dropdown">
+              <select class="form-control" name="workclass">
+                <option disabled selected>workclass</option>
+                <option>Private</option>
+                <option>Self-emp-not-inc</option>
+                <option>Self-emp-inc</option>
+                <option>Federal-gov</option>
+                <option>Local-gov</option>
+                <option>State-gov</option>
+                <option>Without-pay</option>
+                <option>Never-worked</option>
+              </select>
+            </div>
+            <input type="text" name="fnlwgt" placeholder="fnlwgt"/>
+            <div class="dropdown">
+              <select class="form-control" name="education">
+                <option disabled selected>education</option>
+                <option>Bachelors</option>
+                <option>Some-college</option>
+                <option>11th</option>
+                <option>HS-grad</option>
+                <option>Prof-school</option>
+                <option>Assoc-acdm</option>
+                <option>Assoc-voc</option>
+                <option>9th</option>
+                <option>7th-8th</option>
+                <option>12th</option>
+                <option>Masters</option>
+                <option>1st-4th</option>
+                <option>10th</option>
+                <option>Doctorate</option>
+                <option>5th-6th</option>
+                <option>Preschool</option>
+              </select>
+            </div>
+            <input type="text" name="education-num" placeholder="education-num"/>
+            <div class="dropdown">
+              <select class="form-control" name="marital-status">
+                <option disabled selected>marital-status</option>
+                <option>Married-civ-spouse</option>
+                <option>Divorced</option>
+                <option>Never-married</option>
+                <option>Separated</option>
+                <option>Widowed</option>
+                <option>Married-spouse-absent</option>
+                <option>Married-AF-spouse</option>
+              </select>
+            </div>
+            <div class="dropdown">
+              <select class="form-control" name="occupation">
+                <option disabled selected>occupation</option>
+                <option>Tech-support</option>
+                <option>Craft-repair</option>
+                <option>Other-service</option>
+                <option>Sales</option>
+                <option>Exec-managerial</option>
+                <option>Prof-specialty</option>
+                <option>Handlers-cleaners</option>
+                <option>Machine-op-inspct</option>
+                <option>Adm-clerical</option>
+                <option>Farming-fishing</option>
+                <option>Transport-moving</option>
+                <option>Priv-house-serv</option>
+                <option>Protective-serv</option>
+                <option>Armed-Forces</option>
+              </select>
+            </div>
+            <div class="dropdown">
+              <select class="form-control" name="relationship">
+                <option disabled selected>relationship</option>
+                <option>Wife</option>
+                <option>Own-child</option>
+                <option>Husband</option>
+                <option>Not-in-family</option>
+                <option>Other-relative</option>
+                <option>Unmarried</option>
+              </select>
+            </div>
+            <div class="dropdown">
+              <select class="form-control" name="race">
+                <option disabled selected>race</option>
+                <option>White</option>
+                <option>Asian-Pac-Islander</option>
+                <option>Amer-Indian-Eskimo</option>
+                <option>Black</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="dropdown">
+              <select class="form-control" name="sex">
+                <option disabled selected>sex</option>
+                <option>Female</option>
+                <option>Male</option>
+              </select>
+            </div>
+            <input type="text" name="capital-gain" placeholder="capital-gain"/>
+            <input type="text" name="capital-loss" placeholder="capital-loss"/>
+            <input type="text" name="hours-per-week" placeholder="hours-per-week"/>
+            <div class="dropdown">
+              <select class="form-control" name="native-country">
+                <option disabled selected>native-country</option>
+                <option>United-States</option>
+                <option>Cambodia</option>
+                <option>England</option>
+                <option>Puerto-Rico</option>
+                <option>Canada</option>
+                <option>Germany</option>
+                <option>Outlying-US(Guam-USVI-etc)</option>
+                <option>India</option>
+                <option>Japan</option>
+                <option>Greece</option>
+                <option>South</option>
+                <option>China</option>
+                <option>Cuba</option>
+                <option>Iran</option>
+                <option>Honduras</option>
+                <option>Philippines</option>
+                <option>Italy</option>
+                <option>Poland</option>
+                <option>Jamaica</option>
+                <option>Vietnam</option>
+                <option>Mexico</option>
+                <option>Portugal</option>
+                <option>Ireland</option>
+                <option>France</option>
+                <option>Dominican-Republic</option>
+                <option>Laos</option>
+                <option>Ecuador</option>
+                <option>Taiwan</option>
+                <option>Haiti</option>
+                <option>Columbia</option>
+                <option>Hungary</option>
+                <option>Guatemala</option>
+                <option>Nicaragua</option>
+                <option>Scotland</option>
+                <option>Thailand</option>
+                <option>Yugoslavia</option>
+                <option>El-Salvador</option>
+                <option>Trinadad&Tobago</option>
+                <option>Peru</option>
+                <option>Hong</option>
+                <option>Holand-Netherlands</option>
+              </select>
+            </div>
+            <button type="submit" name="btn" value="Login" /> Predict
+          </form>
+        </div>
+      </div>
+    <!-- {!! Form::close() !!} -->
+    </body>
+    </html>
