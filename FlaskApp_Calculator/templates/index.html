@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MoneyCo</title>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <div>
+      <form action="http://localhost:5000/count" method="post">
+        Input 1 : <input type="text" name="input1"><br>
+        Input 2 : <input type="text" name="input2"><br>
+        <br>
+        <input type="submit" name="plus" id="btnsubmit">
+      </form>
+    </div>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+          $('#btnsubmit').click(function() {
+       
+              $.ajax({
+                  url: '/count',
+                  data: $('form').serialize(),
+                  type: 'POST',
+                  success: function(response) {
+                      console.log(response);
+                  },
+                  error: function(error) {
+                      console.log(error);
+                  }
+              });
+          });
+      });
+    </script>-->
+  </body>
+</html>
